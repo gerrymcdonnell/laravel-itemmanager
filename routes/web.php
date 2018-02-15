@@ -12,9 +12,7 @@
 */
 
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
 
 //point to index action ofr todos contrller
 /*Route::get('/', 'TodosController@index');*/
@@ -23,7 +21,7 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/', 'ItemsController@index');
 
 Route::resource('api/items','ItemsController');
 
