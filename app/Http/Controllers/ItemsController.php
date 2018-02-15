@@ -25,7 +25,7 @@ class ItemsController extends Controller
      */
     public function create()
     {
-        //
+
     }
 
     /**
@@ -36,7 +36,7 @@ class ItemsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
     }
 
     /**
@@ -45,9 +45,11 @@ class ItemsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+    //http://laravel.itemmanager/api/items/1
     public function show($id)
     {
-        //
+        $item=Item::find($id);
+        return response()->json($item);
     }
 
     /**
@@ -58,7 +60,7 @@ class ItemsController extends Controller
      */
     public function edit($id)
     {
-        //
+
     }
 
     /**
